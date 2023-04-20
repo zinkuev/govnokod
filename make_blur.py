@@ -21,19 +21,4 @@ final0 = after_smooth.resize(img.size, Image.Resampling.NEAREST)
 after_final0 = final0.resize((256,256), resample=Image.Resampling.BILINEAR)
 final1 = after_final0.resize(img.size, Image.Resampling.NEAREST)
 
-
-
 final1.save("blur.png")
-
-
-
-# from PIL import ImageFilter
-# from PIL import Image
-
-
-
-# img = Image.open("first_cut.png")
-# kraya = img.convert("L")
-# smoth = kraya.filter(ImageFilter.SMOOTH)
-# blurred_image = smoth.filter(ImageFilter.BoxBlur(15)).show()
-
