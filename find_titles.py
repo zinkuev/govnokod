@@ -12,12 +12,12 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 ret, thresh1 = cv2.threshold(gray, 0, 255, cv2.THRESH_OTSU |
                                           cv2.THRESH_BINARY_INV)
-# cv2.imwrite('threshold_image.jpg',thresh1)
+
 
 rect_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (12, 12))
 
 dilation = cv2.dilate(thresh1, rect_kernel, iterations = 2)
-# cv2.imwrite('dilation_image.jpg',dilation)
+
 
 contours, hierarchy = cv2.findContours(dilation, cv2.RETR_EXTERNAL,
                                             cv2.CHAIN_APPROX_NONE)
