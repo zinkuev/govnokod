@@ -1,10 +1,6 @@
 ###ЭТОТ КОД НАХОДИТ ГРАНИЦЫ ЗАГОЛОВКОК, САМАЯ СТАБИЛЬНАЯ ВЕРСИЯ
 
 import cv2
-from pytesseract import pytesseract
-
-path_to_tesseract = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-pytesseract.tesseract_cmd = path_to_tesseract
 
 img = cv2.imread("blur.png")
 
@@ -51,4 +47,3 @@ for cnt in contours:
         cv2.imwrite('rectanglebox.jpg',rect)
     
     
-
